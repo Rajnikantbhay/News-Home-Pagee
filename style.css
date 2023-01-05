@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+:root{
+    --nav-text: hsl(236, 13%, 42%)
+}
+
+body{
+    min-height: 100vh;
+    padding: 105px 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    
+    width: 100%;
+    max-width: 1100px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    margin-left: 1.7rem;
+    
+}
+
+ul li a{
+    font-family: 'Inter';
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--nav-text);
+}
+
+.left-side{
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left > div{
+    width: 50%;
+}
+
+.left{
+    display: flex;
+    
+}
+
+p{
+    color: var(--nav-text);
+}
+
+.left-second-side p{
+    padding: 1rem 0;
+    font-size: 13px;
+    font-family: 'Inter';
+    text-align: start ;
+    color: var(--nav-text);
+}
+
+.left-first-side h1{
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.left-second-side button{
+    padding: .5rem 1rem;
+    
+    width: 12rem;
+    background: hsl(5, 85%, 63%);
+    color: #fff;
+    letter-spacing: .3rem;
+    border: none;
+    font-size: 12px;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+
+.main{
+    display: flex;
+    margin-bottom: 2rem;
+    
+}
+
+.side-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: hsl(240, 100%, 5%);
+    padding: 1rem 1rem;
+    margin-left: 1rem;
+}
+
+.side-content > div{
+ padding-bottom: 1rem;
+ border-bottom: 1px solid var(--nav-text);   
+ margin-bottom: 2rem;
+}
+
+.side-content h1{
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 1rem;
+}
+
+.side-content h2, p{
+    color: #fff;
+    font-size: 1rem;
+}
+
+.side-content h2{
+    margin-bottom: 2rem;
+}
+
+.side-content p{
+    font-size: 12px;
+    color: var(--nav-text);
+}
+
+.last{
+    display: flex;
+    
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+.last-element{
+    display: flex;
+    width: 100%;
+    
+}
+
+.last-element > div{
+    margin-right: 1em;
+}
+
+
+
+.last-element .images{
+    width: 20vw;
+}
+.last-element .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.last-element p{
+    color: #000;
+    font-size: 12px;
+}
+
+.last-element h4{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: .5rem
+    ;
+    
+}
+
+.last-element h4:first-child{
+  
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: hsl(233, 8%, 79%)
+}
+
+.menu{
+    display: none;
+}
+
+
+@media (max-width:1000px){
+    .menu{
+        display: block;
+        
+    }
+
+    nav{
+        position: relative;
+        padding: 0;
+       
+    }
+
+    ul{
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        text-align: right;
+        left: 0;
+        height: 0;
+        overflow-y: hidden;
+        background: #fff;
+        transition: height .3s ease-in-out;
+        border: none;
+    }
+
+    ul li{
+        margin: 1rem .5rem;
+    }
+
+    ul.active {
+        display: block;
+        height: auto;
+        
+        
+    }
+
+    .left-side{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .side-content{
+        width: 100%;
+        margin: 0;
+    }
+
+    body{
+        padding: 2rem 1rem;
+    }
+
+    .last{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .last > div{
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        width: 100%;
+        
+    }
+
+    .last > div img{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .last-element > div:first-child{
+        margin: 0 1rem;
+    }
+
+  
+    
+}
